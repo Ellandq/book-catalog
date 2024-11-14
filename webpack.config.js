@@ -4,9 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    path: path.resolve(__dirname, 'docs'), // Output to the 'docs' folder
-    filename: 'bundle.js',
-    publicPath: './',
+    path: path.resolve(__dirname, 'docs'),
+    filename: 'bundle.js', 
+    publicPath: './', 
   },
   module: {
     rules: [
@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.css$/, 
         use: ['style-loader', 'css-loader'],
       },
     ],
@@ -29,7 +29,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: 'index.html', 
+      filename: 'index.html',
     }),
   ],
   resolve: {
@@ -40,5 +40,8 @@ module.exports = {
     compress: true,
     port: 9000,
   },
-  mode: 'development',
+  optimization: {
+    minimize: true,
+  },
+  mode: 'production',
 };
