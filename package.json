@@ -2,10 +2,11 @@
   "name": "book-catalog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.jsx",
+  "homepage": "https://Ellandq.github.io/book-catalog",
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "start": "webpack serve --open",
+    "build": "webpack",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
