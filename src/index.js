@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BookCatalog from './components/BookCatalog';
+import BookCatalog from './components/book-catalog';
 import './styles.css';
 
 const books = [
